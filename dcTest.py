@@ -12,12 +12,47 @@ sleep(3)
 print("awake")
 
 
-GPIO.setup(3, GPIO.OUT)
-GPIO.setup(5, GPIO.OUT)
-GPIO.setup(7, GPIO.OUT)
+#setting pins as outputs, add whatever gpio pins are outs to here
+enable_pin = 7
+input1_pin = 3
+input2_pin = 5
+
+
+GPIO.setup(input1_pin, GPIO.OUT)   
+GPIO.setup(input2_pin, GPIO.OUT)
+GPIO.setup(enable_pin, GPIO.OUT)
+
+
+# Set enable pin to high to enable motor
+GPIO.output(enable_pin, True)
+
+# Function to drive motor forward
+def forward():
+    GPIO.output(input1_pin, True)
+    GPIO.output(input2_pin, False)
+
+# Function to drive motor backward
+def backward():
+    GPIO.output(input1_pin, False)
+    GPIO.output(input2_pin, True)
+
+# Move motor forward for 2 seconds
+forward()
+time.sleep(2)
+
+# Stop motor
+GPIO.output(input1_pin, False)
+GPIO.output(input2_pin, False)
+
+# Clean up GPIO
+GPIO.cleanup()
 
 
 
+
+
+
+"""
 pwm=GPIO.PWM(7, 100)
 
 
@@ -56,3 +91,4 @@ GPIO.output(7, False)
 pwm.stop()
 GPIO.cleanup()
 
+"""
