@@ -15,24 +15,36 @@ print("awake")
 #setting pins as outputs, add whatever gpio pins are outs to here
 ###Front wheels
 
+
+# Motor 1 Pins
+
 enable_pin = 18
-enable2_pin = 3
 input1_pin = 16
 input2_pin = 12
+
+# Motor 2 Pins
+enable2_pin = 3
 input3_pin = 5
 input4_pin = 7
 
 ##Rear Wheels
 
+
+#Motor 3 Pins
+
 enable3_pin = 38
-enable4_pin = 33
 input5_pin = 36
 input6_pin = 32
+
+
+# Motor 4 Pins
+
+enable4_pin = 33
 input7_pin = 35
 input8_pin = 37
 
 
-
+# Setting up pins
 
 GPIO.setup(input1_pin, GPIO.OUT)   
 GPIO.setup(input2_pin, GPIO.OUT)
@@ -97,6 +109,13 @@ def stop():
     GPIO.output(input6_pin, False)
     GPIO.output(input7_pin, False)
     GPIO.output(input8_pin, False)
+
+
+    GPIO.output(enable_pin, False)
+    GPIO.output(enable2_pin, False)
+    GPIO.output(enable3_pin, False)
+    GPIO.output(enable4_pin, False)
+
 # Move motor forward for 2 seconds
 forward()
 time.sleep(4)
