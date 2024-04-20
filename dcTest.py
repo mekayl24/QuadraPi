@@ -48,9 +48,9 @@ GPIO.setup(input5_pin, GPIO.OUT)
 GPIO.setup(input6_pin, GPIO.OUT)
 GPIO.setup(enable3_pin, GPIO.OUT)
 
-#GPIO.setup(input7_pin, GPIO.OUT)   
-#GPIO.setup(input8_pin, GPIO.OUT)
-#GPIO.setup(enable4_pin, GPIO.OUT)
+GPIO.setup(input7_pin, GPIO.OUT)   
+GPIO.setup(input8_pin, GPIO.OUT)
+GPIO.setup(enable4_pin, GPIO.OUT)
 
 
 
@@ -58,6 +58,7 @@ GPIO.setup(enable3_pin, GPIO.OUT)
 GPIO.output(enable_pin, True)
 GPIO.output(enable2_pin, True)
 GPIO.output(enable3_pin, True)
+GPIO.output(enable4_pin, True)
 
 # Function to drive motor forward
 def forward():
@@ -68,6 +69,8 @@ def forward():
     
     GPIO.output(input5_pin, True)
     GPIO.output(input6_pin, False)
+    GPIO.output(input7_pin, True)
+    GPIO.output(input8_pin, False)
     
     
 
@@ -81,6 +84,8 @@ def backward():
     
     GPIO.output(input5_pin, False)
     GPIO.output(input6_pin, True)
+    GPIO.output(input7_pin, False)
+    GPIO.output(input8_pin, True)
     
 def stop():
     GPIO.output(input1_pin, False)
@@ -90,9 +95,11 @@ def stop():
     
     GPIO.output(input5_pin, False)
     GPIO.output(input6_pin, False)
+    GPIO.output(input7_pin, False)
+    GPIO.output(input8_pin, False)
 # Move motor forward for 2 seconds
 forward()
-time.sleep(2)
+time.sleep(4)
 
 stop()
 
