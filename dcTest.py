@@ -104,8 +104,7 @@ time.sleep(4)
 stop()
 
 # Stop motor
-GPIO.output(input1_pin, False)
-GPIO.output(input2_pin, False)
+
 
 # Clean up GPIO
 GPIO.cleanup()
