@@ -15,21 +15,21 @@ print("awake")
 #setting pins as outputs, add whatever gpio pins are outs to here
 ###Front wheels
 
-enable_pin = 7
-enable2_pin = 15
-input1_pin = 3
-input2_pin = 5
-input3_pin = 13
-input4_pin = 11
+enable_pin = 18
+enable2_pin = 3
+input1_pin = 16
+input2_pin = 12
+input3_pin = 5
+input4_pin = 7
 
 ##Rear Wheels
 
-enable3_pin = 37
-enable4_pin = 36
-input5_pin = 35
-input6_pin = 33
-input7_pin = 38
-input8_pin = 40
+enable3_pin = 38
+enable4_pin = 33
+input5_pin = 36
+input6_pin = 32
+input7_pin = 35
+input8_pin = 37
 
 
 
