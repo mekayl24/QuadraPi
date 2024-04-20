@@ -122,11 +122,12 @@ time.sleep(4)
 
 stop()
 
+
 # Stop motor
 
 
 # Clean up GPIO
-GPIO.cleanup()
+#GPIO.cleanup()
 
 
 
