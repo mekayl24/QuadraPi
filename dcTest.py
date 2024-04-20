@@ -25,11 +25,11 @@ input4_pin = 11
 ##Rear Wheels
 
 enable3_pin = 37
-enable4_pin = 0
+enable4_pin = 36
 input5_pin = 35
 input6_pin = 33
-input7_pin = 0
-input8_pin = 0
+input7_pin = 38
+input8_pin = 40
 
 
 
