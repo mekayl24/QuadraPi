@@ -37,6 +37,7 @@ def set_servo_angle(servo, angle):
 def main():
     try:
         # Get servo objects
+        print("running main")
         servo1 = kit.servo[0]
         servo2 = kit.servo[1]
 
@@ -63,7 +64,8 @@ def main():
 
         # Move servo 2 back to 90 degrees
         set_servo_angle(servo2, 90)
-
+        
+        return
     except KeyboardInterrupt:
         print("Keyboard Interrupt. Stopping servo control.")
         
