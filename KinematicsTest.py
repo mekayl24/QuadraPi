@@ -7,20 +7,39 @@ from numpy.linalg import inv, norm
 from numpy import array, asarray, matrix
 from math import *
 import matplotlib.pyplot as plt
-from util import RotMatrix3D, point_to_rad
+
+
+
+
+
 
 
 kit = ServoKit(channels=16)
 
 # Define servo channels (adjust if necessary)
-hip_servo_channel = 0
-knee_servo_channel = 1
-ankle_servo_channel = 2
+L_Front_Hip = 0
+L_Front_Knee = 1
+L_Front_Ankle = 2
+
+R_Front_Hip = 0
+R_Front_Knee = 1
+R_Front_Ankle = 2
+
+L_Back_Hip = 0
+L_Back_Knee = 1
+L_Back_Ankle = 2
+
+R_Back_Hip = 0
+R_Back_Knee = 1
+R_Back_Ankle = 2
+
+
 
 # Initialize servos to 90 degrees (middle position)
 kit.servo[hip_servo_channel].angle = 90
 kit.servo[knee_servo_channel].angle = 90
 kit.servo[ankle_servo_channel].angle = 90
+
 
 def move_servo(channel, start_angle, end_angle, delay=0.01):
     step = 1 if start_angle < end_angle else -1
@@ -28,7 +47,7 @@ def move_servo(channel, start_angle, end_angle, delay=0.01):
         kit.servo[channel].angle = angle
         time.sleep(delay)
     kit.servo[channel].angle = end_angle
-
+""""
 try:
     while True:
         # Move hip joint from 0 to 180 degrees and back
@@ -53,3 +72,4 @@ except KeyboardInterrupt:
     kit.servo[ankle_servo_channel].angle = 90
     print("Program terminated and servos reset to initial position.")
     
+    """
