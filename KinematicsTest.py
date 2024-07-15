@@ -41,8 +41,8 @@ kit.servo[L_Front_Knee].angle = 90
 kit.servo[L_Front_Ankle].angle = 90
 
 kit.servo[R_Front_Hip].angle = 90
-kit.servo[R_Front_Knee].angle = 90
-kit.servo[R_Front_Ankle].angle = 90
+kit.servo[R_Front_Knee].angle = 100
+kit.servo[R_Front_Ankle].angle = 50
 
 kit.servo[L_Back_Hip].angle = 90
 kit.servo[L_Back_Knee].angle = 90
@@ -87,3 +87,53 @@ except KeyboardInterrupt:
     print("Program terminated and servos reset to initial position.")
     
     """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
