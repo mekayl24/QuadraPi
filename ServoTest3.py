@@ -8,7 +8,7 @@ i2c = busio.I2C(board.SCL, board.SDA)
 
 # Initialize PCA9685 servo controller
 kit = ServoKit(channels=16, i2c=i2c)
-
+  
 # Define the servo number (0-15) connected to the PCA9685
 servo_number = 0
 
