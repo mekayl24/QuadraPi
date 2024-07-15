@@ -21,24 +21,38 @@ L_Front_Hip = 0
 L_Front_Knee = 1
 L_Front_Ankle = 2
 
-R_Front_Hip = 0
-R_Front_Knee = 1
-R_Front_Ankle = 2
+R_Front_Hip = 3
+R_Front_Knee = 4
+R_Front_Ankle = 5
 
-L_Back_Hip = 0
-L_Back_Knee = 1
-L_Back_Ankle = 2
+L_Back_Hip = 6
+L_Back_Knee = 7
+L_Back_Ankle = 8
 
-R_Back_Hip = 0
-R_Back_Knee = 1
-R_Back_Ankle = 2
+R_Back_Hip = 9
+R_Back_Knee = 10
+R_Back_Ankle = 11
 
 
 
 # Initialize servos to 90 degrees (middle position)
-kit.servo[hip_servo_channel].angle = 90
-kit.servo[knee_servo_channel].angle = 90
-kit.servo[ankle_servo_channel].angle = 90
+kit.servo[L_Front_Hip].angle = 90
+kit.servo[L_Front_Knee].angle = 90
+kit.servo[L_Front_Ankle].angle = 90
+
+kit.servo[R_Front_Hip].angle = 90
+kit.servo[R_Front_Knee].angle = 90
+kit.servo[R_Front_Ankle].angle = 90
+
+kit.servo[L_Back_Hip].angle = 90
+kit.servo[L_Back_Knee].angle = 90
+kit.servo[L_Back_Ankle].angle = 90
+
+kit.servo[R_Back_Hip].angle = 90
+kit.servo[R_Back_Knee].angle = 90
+kit.servo[R_Back_Ankle].angle = 90
+
+
 
 
 def move_servo(channel, start_angle, end_angle, delay=0.01):
