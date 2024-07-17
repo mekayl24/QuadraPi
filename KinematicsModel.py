@@ -63,6 +63,7 @@ class kinematics():
         theta_2 = b_1 - b_2    
         theta_3 = pi - b_3
         
+        
         # CALCULATE THE COORDINATES OF THE JOINTS FOR VISUALIZATION
         j1 = np.array([0,0,0])
         
