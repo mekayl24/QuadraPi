@@ -160,4 +160,3 @@ def testMove():
 
 
 testMove()
-move_robot(z = -.22)
