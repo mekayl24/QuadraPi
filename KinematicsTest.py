@@ -158,4 +158,4 @@ def testMove():
 
 
 testMove()
-motionTest(roll = 20, pitch = 20, yaw = 20, x = 0.05, y = 0.05, z = -0.22)
+motionTest(roll = 20, pitch = 20, yaw = 20, x = 0.05, y = 0.05, z = -0.16)
