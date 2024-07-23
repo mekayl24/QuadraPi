@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 from kinematics import kinematics
-from ipywidgets import *
+#from ipywidgets import *
 from math import *
 
 
