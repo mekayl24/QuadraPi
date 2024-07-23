@@ -79,9 +79,9 @@ def move_robot(roll = 0, pitch = 0, yaw = 0, x = 0, y = 0, z = -0.15, rot_x = 0,
     
     #setting all servo angles to corresponing joints
 
-    kit.servo[L_Front_Hip].angle = -1*(L_Front_Angles[0])
-    kit.servo[L_Front_Knee].angle = -1*(L_Front_Angles[1])
-    kit.servo[L_Front_Ankle].angle = -1*(L_Front_Angles[2])
+    kit.servo[L_Front_Hip].angle = (L_Front_Angles[0])
+    kit.servo[L_Front_Knee].angle = (L_Front_Angles[1])
+    kit.servo[L_Front_Ankle].angle = (L_Front_Angles[2])
 
     time.sleep(0.01)
 
