@@ -106,6 +106,8 @@ def move_robot(roll = 0, pitch = 0, yaw = 0, x = 0, y = 0, z = -0.15, rot_x = 0,
 
     time.sleep(0.01)
 
+    print(servo_angles)
+
 
 
 def motionTest(roll= 0, pitch =0, yaw = 0, x= 0, y= 0, z = -0.15, rot_x = 0, rot_y = 0, rot_z = 0):
