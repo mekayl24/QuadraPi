@@ -15,13 +15,13 @@ class kinematics():
         
         self.right_legs = [right_front, right_back]
         
-        self.link_1 = 0.050
+        self.link_1 = 0.070
         self.link_2 = 0.115
         self.link_3 = 0.110
         self.phi = radians(90)
         
-        self.length = 0.223910
-        self.width = 0.205076
+        self.length = 0.225
+        self.width = 0.180
         self.hight = 0.0
         
         self.leg_origins = np.matrix([[self.length/2, self.width/2, 0],

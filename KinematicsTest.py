@@ -57,10 +57,10 @@ k = kinematics()
 
 
 offsets = {
-    0: {0: radians(-240.5), 1: radians(-130.5 ), 2: radians(-12.15)},  # Offsets for left front leg
-    1: {0: radians(-240.5), 1: radians(-130.5), 2: radians(-12.15)}, # Offsets for left back leg
-    2: {0: radians(-116.5), 1: radians(-130.5), 2: radians(-12.15)},  # Offsets for right front leg
-    3: {0: radians(-97.5), 1: radians(-130.5), 2: radians(-12.15)}  # Offsets for right back leg
+    0: {0: radians(-231), 1: radians(-129 ), 2: radians(-21 + 90)},  # Offsets for left front leg
+    1: {0: radians(-231), 1: radians(-129 ), 2: radians(-21 + 90)}, # Offsets for left back leg
+    2: {0: radians(-125), 1: radians(-126 - 90), 2: radians(-21)},  # Offsets for right front leg
+    3: {0: radians(-106), 1: radians(-126), 2: radians(-21)}  # Offsets for right back leg
 }
 
 
