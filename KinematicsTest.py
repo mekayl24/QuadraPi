@@ -72,8 +72,8 @@ def move_robot(roll = 0, pitch = 0, yaw = 0, x = 0, y = 0, z = -0.15, rot_x = 0,
     servo_angles = k.get_servo_angles()   #retrieve angles from object
 
 
-    L_Front_Angles = -servo_angles[0]
-    L_Back_Angles = -servo_angles[1]
+    L_Front_Angles = -1* servo_angles[0]
+    L_Back_Angles = -1* servo_angles[1]
     R_Front_Angles = servo_angles[2]
     R_Back_Angles = servo_angles[3]       
     
