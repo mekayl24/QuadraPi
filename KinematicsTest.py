@@ -154,7 +154,7 @@ def testMove():
     kit.servo[L_Back_Knee].angle = 123
 
     kit.servo[R_Back_Hip].angle = 95
-    kit.servo[R_Back_Ankle].angle = 40
+    kit.servo[R_Back_Ankle].angle = 35
     kit.servo[R_Back_Knee].angle = 22
 
     return
