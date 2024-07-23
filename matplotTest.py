@@ -13,17 +13,18 @@ k = kinematics()
 
 
 offsets = {
-    0: {0: radians(-240.5), 1: radians(-130.5), 2: radians(-12.15)},  # Offsets for left front leg
-    1: {0: radians(-240.5), 1: radians(-130.5), 2: radians(-12.15)}, # Offsets for left back leg
+    0: {0: radians(-240.5), 1: radians(-130.5 +90  ), 2: radians(-12.15)},  # Offsets for left front leg
+    1: {0: radians(-240.5), 1: radians(-130.5 +90  ), 2: radians(-12.15)}, # Offsets for left back leg
     2: {0: radians(-116.5), 1: radians(-130.5), 2: radians(-12.15)},  # Offsets for right front leg
     3: {0: radians(-97.5), 1: radians(-130.5), 2: radians(-12.15)}  # Offsets for right back leg
 }
 
 def move_robot(roll =0, pitch = 0, yaw = 0, x = 0, y = 0, z = -0.15, rot_x= 0, rot_y = 0, rot_z= 0):
+    servo_angles = k.get_servo_angles() 
     k.plot_robot(xyz=[[x,y,z],[x,y,z],[x,y,z],[x,y,z]], rot=[roll,pitch,yaw], 
                  is_radians=False, center_offset=[rot_x,rot_y,rot_z], offsets = offsets)
     
-    servo_angles = k.get_servo_angles() 
+    
 
 
     L_Front_Angles = servo_angles[0]
