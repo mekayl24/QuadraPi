@@ -139,3 +139,25 @@ def motionTest(roll= 0, pitch =0, yaw = 0, x= 0, y= 0, z = -0.15, rot_x = 0, rot
     move_robot()
 
 
+def testMove():
+        # Initialize servos to 90 degrees (middle position)
+    kit.servo[L_Front_Hip].angle = 100
+    kit.servo[L_Front_Knee].angle =90
+    kit.servo[L_Front_Ankle].angle = 90
+
+    kit.servo[R_Front_Hip].angle = 83
+    kit.servo[R_Front_Knee].angle = 90 #increasing makes less perpenic
+    kit.servo[R_Front_Ankle].angle = 90 #increasing makes less perp.
+
+    kit.servo[L_Back_Hip].angle = 100
+    kit.servo[L_Back_Ankle].angle =90 #increasing == more perpendicular
+    kit.servo[L_Back_Knee].angle = 90
+
+    kit.servo[R_Back_Hip].angle = 102
+    kit.servo[R_Back_Ankle].angle = 90
+    kit.servo[R_Back_Knee].angle = 90
+
+    return
+
+
+testMove()
