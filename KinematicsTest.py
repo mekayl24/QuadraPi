@@ -140,16 +140,16 @@ def motionTest(roll= 0, pitch =0, yaw = 0, x= 0, y= 0, z = -0.15, rot_x = 0, rot
 def testMove():
         # Initialize servos to 90 degrees (middle position)
     kit.servo[L_Front_Hip].angle = 100
-    kit.servo[L_Front_Knee].angle =130
-    kit.servo[L_Front_Ankle].angle = 130
+    kit.servo[L_Front_Knee].angle =120
+    kit.servo[L_Front_Ankle].angle = 110
 
     kit.servo[R_Front_Hip].angle = 85
     kit.servo[R_Front_Knee].angle = 50 #increasing makes less perpenic
     kit.servo[R_Front_Ankle].angle = 50 #increasing makes less perp.
 
     kit.servo[L_Back_Hip].angle = 100
-    kit.servo[L_Back_Ankle].angle =130 #increasing == more perpendicular
-    kit.servo[L_Back_Knee].angle = 130
+    kit.servo[L_Back_Ankle].angle =120 #increasing == more perpendicular
+    kit.servo[L_Back_Knee].angle = 110
 
     kit.servo[R_Back_Hip].angle = 102
     kit.servo[R_Back_Ankle].angle = 50
