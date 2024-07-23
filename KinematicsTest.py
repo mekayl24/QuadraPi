@@ -142,7 +142,7 @@ def motionTest(roll= 0, pitch =0, yaw = 0, x= 0, y= 0, z = -0.15, rot_x = 0, rot
 def testMove():
         # Initialize servos to 90 degrees (middle position)
     kit.servo[L_Front_Hip].angle = 106
-    kit.servo[L_Front_Knee].angle =23
+    kit.servo[L_Front_Knee].angle =123
     kit.servo[L_Front_Ankle].angle = 122
 
     kit.servo[R_Front_Hip].angle = 76
@@ -154,7 +154,7 @@ def testMove():
     kit.servo[L_Back_Knee].angle = 23
 
     kit.servo[R_Back_Hip].angle = 95
-    kit.servo[R_Back_Ankle].angle = 22
+    kit.servo[R_Back_Ankle].angle = 122
     kit.servo[R_Back_Knee].angle = 122
 
     return
