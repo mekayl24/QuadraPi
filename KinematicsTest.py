@@ -151,10 +151,10 @@ def testMove():
 
     kit.servo[L_Back_Hip].angle = 106
     kit.servo[L_Back_Ankle].angle =122 #increasing == more perpendicular
-    kit.servo[L_Back_Knee].angle = 23
+    kit.servo[L_Back_Knee].angle = 123
 
     kit.servo[R_Back_Hip].angle = 95
-    kit.servo[R_Back_Ankle].angle = 23
+    kit.servo[R_Back_Ankle].angle = 123
     kit.servo[R_Back_Knee].angle = 122
 
     return
