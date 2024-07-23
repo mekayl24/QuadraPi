@@ -141,4 +141,9 @@ def motionTest(roll= 0, pitch =0, yaw = 0, x= 0, y= 0, z = -0.15, rot_x = 0, rot
     return
 
 
+<<<<<<< HEAD
 motionTest(roll = 20, pitch = 20, yaw = 20, x = 0.05, y = 0.05, z = -0.22)
+=======
+
+##motionTest(roll = 20, pitch = 20, yaw = 20, x = 0.05, y = 0.05, z = -0.22)
+>>>>>>> e8579e211b92511b160d53074536e5ffd17fa603
