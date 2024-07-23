@@ -146,8 +146,8 @@ def testMove():
     kit.servo[L_Front_Ankle].angle = 122
 
     kit.servo[R_Front_Hip].angle = 76
-    kit.servo[R_Front_Knee].angle = 122 #increasing makes less perpenic
-    kit.servo[R_Front_Ankle].angle = 123 #increasing makes less perp.
+    kit.servo[R_Front_Knee].angle = 22 #increasing makes less perpenic
+    kit.servo[R_Front_Ankle].angle = 23 #increasing makes less perp.
 
     kit.servo[L_Back_Hip].angle = 106
     kit.servo[L_Back_Ankle].angle =122 #increasing == more perpendicular
