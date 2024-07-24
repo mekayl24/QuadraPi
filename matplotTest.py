@@ -11,14 +11,14 @@ plt.rcParams['figure.dpi'] = 150
 
 k = kinematics()
 
+offsets = {}
 
-
-offsets = {
-    0: {0: radians(-231), 1: radians(-129), 2: radians(-21 + 90)},  # Offsets for left front leg
-    1: {0: radians(-231), 1: radians(-129 ), 2: radians(-21 + 90)}, # Offsets for left back leg
-    2: {0: radians(-125), 1: radians(-126 - 90), 2: radians(-21)},  # Offsets for right front leg
-    3: {0: radians(-106), 1: radians(-126 - 90), 2: radians(-21)}  # Offsets for right back leg
-}
+# offsets = {
+#     0: {0: radians(-231), 1: radians(-129), 2: radians(-21 + 90)},  # Offsets for left front leg
+#     1: {0: radians(-231), 1: radians(-129 ), 2: radians(-21 + 90)}, # Offsets for left back leg
+#     2: {0: radians(-125), 1: radians(-126 - 90), 2: radians(-21)},  # Offsets for right front leg
+#     3: {0: radians(-106), 1: radians(-126 - 90), 2: radians(-21)}  # Offsets for right back leg
+# }
 def move_robot(roll =0, pitch = 0, yaw = 0, x = 0, y = 0, z = -0.145, rot_x= 0, rot_y = 0, rot_z= 0):
     servo_angles = k.get_servo_angles() 
     k.plot_robot(xyz=[[x,y,z],[x,y,z],[x,y,z],[x,y,z]], rot=[roll,pitch,yaw], 
@@ -41,7 +41,7 @@ def move_robot(roll =0, pitch = 0, yaw = 0, x = 0, y = 0, z = -0.145, rot_x= 0, 
     print("R Back Angles: ", R_Back_Angles)
 
     
-move_robot(z = -0.22)
+move_robot(roll = 20)
 
 
 
