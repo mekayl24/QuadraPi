@@ -17,7 +17,7 @@ class kinematics():
         
         self.link_1 = 0.070
         self.link_2 = 0.115
-        self.link_3 = 0.110
+        self.link_3 = 0.115
         self.phi = radians(90)
         
         self.length = 0.225
@@ -76,13 +76,15 @@ class kinematics():
         b_3 = acos((self.link_2**2 + self.link_3**2 - len_B**2) / (2 * self.link_2 * self.link_3))  
         
         theta_2 = b_1 - b_2    
-        theta_3 = pi - b_3
+        theta_3 = pi - b_3 
         
         j1 = np.array([0,0,0])
         j3_ = np.reshape(np.array([self.link_2*cos(theta_2),0, self.link_2*sin(theta_2)]),[3,1])
         j3 = np.asarray(j2 + np.reshape(np.linalg.inv(rot_mtx)*j3_, [1,3])).flatten()
         j4_ = j3_ + np.reshape(np.array([self.link_3*cos(theta_2+theta_3),0, self.link_3*sin(theta_2+theta_3)]), [3,1])
         j4 = np.asarray(j2 + np.reshape(np.linalg.inv(rot_mtx)*j4_, [1,3])).flatten()
+        
+        
         
         angles = self.angle_corrector(angles=[theta_1, theta_2, theta_3], is_right=is_right, legID = legID, offsets = offsets)
         
@@ -96,15 +98,17 @@ class kinematics():
     def angle_corrector(self, angles=[0,0,0], is_right=True, legID = 0, offsets = None):
         theta_1, theta_2, theta_3 = angles
 
-        if offsets and legID in offsets:
-            if 0 in offsets[legID]:
-                theta_1 += offsets[legID][0]
-            if 1 in offsets[legID]:
-                theta_2 += offsets[legID][1]
-            if 2 in offsets[legID]:
-                theta_3 += offsets[legID][2]
-
-
+#         if offsets and legID in offsets:
+#             if 0 in offsets[legID]:
+#                 theta_1 += offsets[legID][0]
+#             if 1 in offsets[legID]:
+#                 theta_2 += offsets[legID][1]
+#             if 2 in offsets[legID]:
+#                 theta_3 += offsets[legID][2]
+        theta_1 = (radians(360) - theta_1) + radians(90)
+        theta_2 = radians(120) - (radians(270) - theta_2)
+        theta_3 = (theta_3/radians(120))* radians(180)
+ 
 
         return [theta_1, theta_2, theta_3]
         
