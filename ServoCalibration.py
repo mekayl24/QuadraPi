@@ -48,9 +48,9 @@ L_Back_Knee = 8
 # kit.servo[R_Front_Knee].angle = 90 #increasing makes less perpenic
 # kit.servo[R_Front_Ankle].angle = 90 #increasing makes less perp.
 
-move_servo(L_Back_Hip,90)
-move_servo(L_Back_Ankle, 65)
-move_servo(L_Back_Knee, 100)
+move_servo(L_Back_Hip,110)
+move_servo(L_Back_Ankle, 84)
+move_servo(L_Back_Knee, 40)
 
 # 
 # kit.servo[L_Back_Hip].angle = 90

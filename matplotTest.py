@@ -41,7 +41,7 @@ def move_robot(roll =0, pitch = 0, yaw = 0, x = 0, y = 0, z = -0.145, rot_x= 0, 
     print("R Back Angles: ", R_Back_Angles)
 
     
-move_robot(z = -0.15)
+move_robot(z = -0.20)
 
 
 

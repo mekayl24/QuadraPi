@@ -75,8 +75,11 @@ class kinematics():
         b_2 = acos((self.link_2**2 + len_B**2 - self.link_3**2) / (2 * self.link_2 * len_B)) 
         b_3 = acos((self.link_2**2 + self.link_3**2 - len_B**2) / (2 * self.link_2 * self.link_3))  
         
-        theta_2 = b_1 - b_2    
-        theta_3 = pi - b_3 
+        theta_2 = b_1 - b_2
+        
+        gamma = radians(90) - (b_1 - radians(270)) 
+        theta_3 = pi - b_3
+        
         
         j1 = np.array([0,0,0])
         j3_ = np.reshape(np.array([self.link_2*cos(theta_2),0, self.link_2*sin(theta_2)]),[3,1])
@@ -86,7 +89,7 @@ class kinematics():
         
         
         
-        angles = self.angle_corrector(angles=[theta_1, theta_2, theta_3], is_right=is_right, legID = legID, offsets = offsets)
+        angles = self.angle_corrector(angles=[theta_1, theta_2, theta_3], is_right=is_right, legID = legID, offsets = offsets, gamma = gamma)
         
 
         self.servo_angles[legID] = [degrees(angles[0]), degrees(angles[1]), degrees(angles[2])]
@@ -95,7 +98,7 @@ class kinematics():
         return [angles[0], angles[1], angles[2], j1, j2, j3, j4]
 
 
-    def angle_corrector(self, angles=[0,0,0], is_right=True, legID = 0, offsets = None):
+    def angle_corrector(self, angles=[0,0,0], is_right=True, legID = 0, offsets = None, gamma = 0):
         theta_1, theta_2, theta_3 = angles
 
 #         if offsets and legID in offsets:
@@ -108,7 +111,7 @@ class kinematics():
         theta_1 = (radians(360) - theta_1) + radians(90)
         theta_2 = radians(120) - (radians(270) - theta_2)
         #theta_3 = (theta_3/radians(120))* radians(180)
- 
+        theta_3 = theta_3 - radians(30)
 
         return [theta_1, theta_2, theta_3]
         
