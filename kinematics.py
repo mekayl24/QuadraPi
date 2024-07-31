@@ -107,7 +107,7 @@ class kinematics():
 #                 theta_3 += offsets[legID][2]
         theta_1 = (radians(360) - theta_1) + radians(90)
         theta_2 = radians(120) - (radians(270) - theta_2)
-        theta_3 = (theta_3/radians(120))* radians(180)
+        #theta_3 = (theta_3/radians(120))* radians(180)
  
 
         return [theta_1, theta_2, theta_3]
